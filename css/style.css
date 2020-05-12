@@ -1,0 +1,525 @@
+body{
+    background-color: #0a0808;
+} 
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/Coldiac.otf);
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src: url(../fonts/Tangerine_Regular.ttf);
+}
+
+/* navbar */
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.55rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-family: myFirstFont;
+}
+
+@media only screen and (max-width: 600px) {
+	.navbar-brand {
+        font-size: 1.15rem;
+    }	
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #9b8774;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: #9b8774;
+}
+
+.nav a{
+    font-size: 1.8em !important;
+}
+
+/* header */
+
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+  }
+
+  /* section spacing only */
+
+  section {
+    padding: 7% 15%;
+    overflow: hidden;
+}
+
+  /* text */
+
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: myFirstFont;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.h1, h1 {
+    font-size: 3.2rem;
+}
+
+.h3{
+    font-size: 1.4rem;
+}
+
+
+  .display-4 {
+    font-family: myFirstFont;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+/* section */
+
+#section-about{
+    background-color: #b99682;
+}
+
+/* services */
+#section-service{
+    background-image: linear-gradient(to bottom right, rgba(165, 92, 27, .3), rgba(0, 0, 0, .7)), url('../img/rose-grave.png'); background-color: #000000;
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 38px;
+}
+
+.shadow,
+.subscription-wrapper {
+    box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important;
+}
+
+.icon-primary {
+    color: #ffffff;
+}
+
+.icon-bg-circle {
+    position: relative;
+}
+
+.icon-lg {
+    font-size: 50px;
+}
+
+.icon-bg-circle::before {
+    z-index: 1;
+    position: relative;
+}
+
+.icon-bg-primary::after {
+    background: #ffffff !important;
+}
+
+.icon-bg-circle::after {
+    content: '';
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    top: -35px;
+    left: 15px;
+    border-radius: 50%;
+    background: inherit;
+    opacity: .1;
+}
+
+.icon-bg-yellow::after {
+    background: #ffffff !important;
+}
+
+.icon-bg-purple::after {
+    background: #ffffff;
+}
+
+.icon-yellow {
+    color: #ffffff;
+}
+
+.icon-purple {
+    color: #ffffff;
+}
+
+.icon-cyan {
+    color: #ffffff;
+}
+
+.icon-bg-cyan::after {
+    background: #ffffff;
+}
+
+.icon-bg-red::after {
+    background: #ffffff;
+}
+
+.icon-red {
+    color: #ffffff;
+}
+
+.icon-bg-green::after {
+    background: #9b8774;
+}
+
+.icon-green {
+    color: #ffffff;
+}
+
+.icon-bg-orange::after {
+    background: #ffffff;
+}
+
+.icon-orange {
+    color: #ffffff;
+}
+
+.icon-bg-blue::after {
+    background: #ffffff;
+}
+
+.icon-blue {
+    color: #ffffff;
+}
+
+/* section-loved-ones */
+
+#section-loved-ones{
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .9)), url('../img/CemeteryWomanPhoto.png'); background-color: #000000;
+    background-position: center center;
+    background-size: cover; 
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* facts section */
+
+#facts-section{
+    background-color: #b99682;
+}
+
+.numbers{
+    font-size: 3rem;
+    color: #f1d5b5;
+  }
+  
+  .color-text-facts{
+    color: white;
+    font-family: myFirstFont;
+  }
+
+@media only screen and (max-width: 600px) {
+	.numbers {
+		font-size: 1.5rem;
+		color: #f1d5b5;
+	}	
+}
+
+/* monuments */
+#monuments-section{
+    text-align: center;
+    background-image: linear-gradient(to bottom right, rgba(165, 92, 27, .3), rgba(0, 0, 0, .7)), url('../img/grave-yard-dark.png'); background-color: #000000;
+    background-position: center center;
+    background-size: cover; 
+    background-attachment: fixed;
+}
+.colums{
+    padding: 2%;
+}
+
+.card-title{
+    color: black;
+}
+
+/* gallery */
+
+.gallery-heading{
+    font-size: 3rem;;
+}
+
+.gallery-background-color{
+	background-color: #b99682;
+}
+
+.gallery-block{
+	padding: 7% 15%;
+}
+
+.gallery-block .heading{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gallery-block .heading h2{
+    font-weight: bold;
+    font-size: 5.4rem;
+}
+
+.gallery-block.cards-gallery h6 {
+  font-size: 17px;
+  font-weight: bold; 
+}
+
+.gallery-block.cards-gallery .card{
+  transition: 0.4s ease; 
+}
+
+.gallery-block.cards-gallery .card img {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.gallery-block.cards-gallery .card-body {
+  text-align: center; 
+}
+
+.gallery-block.cards-gallery .card-body p {
+  font-size: 15px; 
+}
+
+.gallery-block.cards-gallery a {
+  color: #212529; 
+}
+
+.gallery-block.cards-gallery a:hover {
+  text-decoration: none; 
+}
+
+.gallery-block.cards-gallery .card {
+  margin-bottom: 0; 
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 576px) {
+
+	.gallery-block .transform-on-hover:hover {
+	    transform: translateY(-10px) scale(1.02);
+	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+	}
+}
+
+/* monument info */
+#monument-info-section{
+    background-color: #b99682;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #f1d5b5;
+    background-color: transparent;
+    font-size: 1.3rem;
+}
+
+.btn-link:hover {
+    color: #f1d5b5a4;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-link:active {
+    text-decoration: none;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: 0;
+    font-family: myFirstFont;
+}
+
+.card-accordion {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: 0;
+    border-radius: .25rem;
+}
+
+.card-body{
+    color: #ffffff;
+}
+
+.rgba-grey-light {
+    background-color: rgba(195,195,195,0.3);
+}
+
+.z-depth-1{
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+
+/* monument-for-sale-section */
+
+#monument-for-sale-section{
+    background-image: linear-gradient(to bottom right, rgba(165, 92, 27, .3), rgba(0, 0, 0, .7)), url('../img/flowers.png'); background-color: #000000;
+    background-position: center center;
+    background-size: cover; 
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.display-3{
+    font-weight: 800;
+}
+
+/* testimonals */
+
+#testimonial-section{
+    text-align: center;
+    background-color: #b99682;
+}
+
+.carousel-item{
+    padding: 7% 15%;
+}
+
+.p-testimonals{
+    font-size: 2rem;
+    color: black;
+}
+
+/* google maps */
+
+.margin-negative{
+	margin-bottom: -5px;
+}
+
+/* footer */
+
+footer{
+    padding: 3% 15%;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url('../img/angle.png'); background-color: #000000;
+    background-position: top center;
+    background-size: cover; 
+    background-attachment: fixed;
+}
+
+li a{
+    color: #ffffff;
+} 
+
+li a:hover{
+    color: #9b8774;
+    text-decoration: none;
+}
+
+.fa-building{
+    color: white;
+}
+
+.fa-phone-alt{
+    color: white;
+}
+
+.fa-fax{
+    color: white;
+}
+
+.font-small{
+    font-size: 1.2rem;
+}
+
+/* back to top */
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #ffffff; /* Set a background color */
+    color: black; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #9b8774; /* Add a dark-grey background on hover */
+    color: white;
+  }
